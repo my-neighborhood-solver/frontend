@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import LoginPage from './Pages/LoginPage'
 import MainPage from './Pages/Mainpage'
 
-export default function PageNavigator() {
+export default function PageRouter() {
   return (
     <>
       <Routes>
