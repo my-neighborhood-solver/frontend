@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
@@ -33,10 +34,17 @@ const Header: React.FC = () => {
     return ReactDOM.createPortal(
       <StyledHeader>
         <div className="modalHeader">
-          <MentBox>
-            <h2>우리동네</h2><Blue>해결사</Blue>
-          </MentBox>
-          <h2>로그인</h2>
+
+          <Link to="/" style={{ textDecoration: "none", color: "#000"}}>
+            <MentBox>
+              <h2>우리동네</h2><Blue>해결사</Blue>
+            </MentBox>
+          </Link>
+
+          <Link to="/login" style={{ textDecoration: "none", color: "#000"}}>
+            <h2>로그인</h2>
+          </Link>
+
         </div>
       </StyledHeader>,
       document.getElementById('modal-root')!
