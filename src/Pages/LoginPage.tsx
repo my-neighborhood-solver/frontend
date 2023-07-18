@@ -2,10 +2,9 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 interface event_type {
-  e: any
-  target: any
-  value: any
+  target: HTMLInputElement;
 }
+
 export default function LoginPage() {
   const [loginEmail, setLoginEmail] = useState('')
 
