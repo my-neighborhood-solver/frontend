@@ -32,6 +32,7 @@ export const HashtagInput = styled.input`
   padding: 6px;
   border:0;
   border-bottom: 1px solid #000;
+  font-weight: 600;
 
   outline: none;
 `
@@ -43,7 +44,8 @@ export const InputBtn = styled.button`
   border: 0;
   background-color: transparent;
   font-size: 14px;
-  font-family: var(--font-nanumfontB);
+  font-family: var(--font-nanumfontEB);
+  font-weight: 600;
 
   cursor: pointer;
 `

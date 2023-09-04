@@ -83,8 +83,8 @@ const [ListALL, setListALL] = useRecoilState<any>(likelist)
           })
           :
           <SC.NoticeBox>
-            <SC.Notification>관심글이 없습니다</SC.Notification>
-            <SC.Notification>하트를 눌러 관심글로 등록해보세요</SC.Notification>
+            <SC.Notification>의뢰를 고민 중이신가요?</SC.Notification>
+            <SC.Notification>좋아요를 눌러 해당 글을 보관해보세요!</SC.Notification>
           </SC.NoticeBox>
         }
       </SC.ListBox>

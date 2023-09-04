@@ -55,7 +55,7 @@ export const SearchInput = styled.input`
     border: none;
     background-color: lightgray;
     outline: none;
-    font-size: 20px;
+    font-size: 14px;
     padding-left: 10px;
 `;
 

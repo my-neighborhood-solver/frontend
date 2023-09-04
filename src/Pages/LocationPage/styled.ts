@@ -32,7 +32,7 @@ export const LocationBox = styled.div`
   background-color: #F5F5F5;
 `
 export const LocationMent =  styled.span`
-  margin: 0 8px;
+  margin: 0 2%;
   font-size: 13px;
 
   overflow: scroll;

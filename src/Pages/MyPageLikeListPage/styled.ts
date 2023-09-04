@@ -83,17 +83,14 @@ export const DeleteBtn = styled.span`
 `
 export const NoticeBox = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #cdcdcd;
-  width: 80%;
-  margin: 32px;
   gap: 10px;
   border-radius: 10px;
   padding: 10px;
 `
 
 export const Notification = styled.p`
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 14px;
 `

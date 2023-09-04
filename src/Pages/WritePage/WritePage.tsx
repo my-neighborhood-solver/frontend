@@ -242,13 +242,14 @@ export default function WritePage() {
 
   return (
         <SC.Container>
+          <SC.Title>이미지 업로드</SC.Title>
           <form style={{width: '100%', height: '100%'}} action='errands' method='post' encType="multipart/form-data" onSubmit={(e) => e.preventDefault()}>
           <SC.ImgBox>
             {previews.length < 5 && (
               <SC.HiddenInput type="file" onChange={handleImageChange} ref={hiddenInputRef} multiple />
             )}
             <SC.CustomButton type="button" onClick={handleButtonClick}>
-              {previews.length < 5 ? <BsPlusLg /> : <TiCancel />}
+              {previews.length < 5 ? <BsPlusLg size={28} /> : <TiCancel size={28} />}
             </SC.CustomButton>
             <SC.ImagesBox>
               {previews &&
@@ -281,22 +282,28 @@ export default function WritePage() {
         <SC.ContentBox>
           <SC.Content onChange={handlecontent}></SC.Content>
         </SC.ContentBox>
+
         <SC.Title>해시태그</SC.Title>
         <SC.HashTagSubBox>
           { hashtags.length > 0 ? 
-            hashtags.map((item, index) => <SC.HashTag key={index}>{`#${item}`}<SC.HashTagCancel>
-              <FaTimes onClick={() => handleDeleteHashTag(index)}></FaTimes>
-              </SC.HashTagCancel></SC.HashTag>)
-            :  <span style={{color: 'lightgray'}}>해시태그를 입력해주세요</span>
+              hashtags.map((item, index) => 
+                  <SC.HashTag key={index}>
+                    <p>{`# ${item}`}</p>
+                    <SC.HashTagCancel>
+                      <FaTimes size={14} onClick={() => handleDeleteHashTag(index)}></FaTimes>
+                    </SC.HashTagCancel>
+                  </SC.HashTag>
+              )
+              :  ''
           }
         </SC.HashTagSubBox>
         <SC.HashtagBox>
-        <SC.HashtagInput
-          onChange={handleHashTagInput}
-          onKeyUp={handleKeyUp} 
-          value={hashTagInput}
-          placeholder="해시 태그를 입력하세요 (공백과 줄바꿈으로 구분)"
-        />
+          <SC.HashtagInput
+            onChange={handleHashTagInput}
+            onKeyUp={handleKeyUp} 
+            value={hashTagInput}
+            placeholder="해시 태그를 입력하세요 (공백과 줄바꿈으로 구분)"
+          />
         </SC.HashtagBox>
         <SC.SubmitBox>
           <SC.SubmitButton  type="button" onClick={handleFormSubmit}>등록하기</SC.SubmitButton>

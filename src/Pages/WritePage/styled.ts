@@ -6,7 +6,6 @@ export const SkeletonItem = styled.div`
     height: 30px;
     background-color: #f2f2f2;
     position: relative;
-    overflow: hidden;
     border-radius: 4px;
     @keyframes skeleton-gradient {
     0% {
@@ -21,25 +20,24 @@ export const SkeletonItem = styled.div`
     }
 `
 
-export const HashTagCancel = styled.button`
-    border: none;
-    justify-content: center;
-    flex-direction: column;
-    background: transparent;
-`
-
 export const HashTag = styled.div`
-    display: inline-block; 
-    white-space: nowrap; 
-    border: 1px solid black;
-    padding: 5px;
+    padding: 10px 8px 6px 8px;
     margin: 2px;
-    border-radius: 10px;
+    border-radius: 8px;
+    background-color: rgb(241, 241, 241);
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+`
+export const HashTagCancel = styled.div`
+    cursor: pointer;
+    padding-left: 10px;
 `
 
 export const HashTagSubBox = styled.div`
-    width: 100%;
-    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px 6px;
 `
 
 export const HiddenInput = styled.input.attrs({
@@ -68,21 +66,26 @@ export const DeleteButton = styled.div`
 `
 
 export const ImagesBox = styled.div`
-    width: 200px;
+    width: 100%;
     display: flex;
+    gap: 6%;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `
 
 export const CustomButton = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 90px;
+    height: 82%;
+    min-width: 25%;
     background-color: rgb(241, 241, 241);
     border-radius: 10px;
     border: none;
     font-size: 50px;
-    margin-right: 20px;
+    margin-right: 12px;
 `
 
 export const Container = styled.section`
@@ -105,9 +108,8 @@ export const Container = styled.section`
 `;
     
 export const ImgBox = styled.div`
-    height: 11%;
+    height: 16%;
     display: flex;
-    margin-bottom: 20px;
     overflow-x: scroll;
     width: 100%;
     &::-webkit-scrollbar {
@@ -128,25 +130,28 @@ export const Image = styled.img`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 82%;
     width: 90px;
     background-color: rgb(241, 241, 241);
     border-radius: 10px;
-    margin-right: 10px;
 `
 export const Title = styled.h3`
     margin-bottom: 5px;
+    font-weight: 700;
 `;
 export const TitleBox = styled.div`
     display: flex;
-    width: 100%;;
+    width: 100%;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 `;
 export const TitleInput = styled.input`
     height: 30px;
     border-radius: 10px;
-    border: 0.5px solid gray;
+    border: 1px solid gray;
+    outline: none;
+    padding: 0 2%;
+    font-weight: 600;
 `;
 
 export const PayBox = styled.div`
@@ -160,20 +165,28 @@ export const PaySubBox = styled.div`
     justify-content: space-between;
     align-items: center;
 `
+
 export const PayDivision = styled.select`
-    width: 20%;
+    width: 24%;
     height: 40px;
     border: none;
     background-color: rgb(241, 241, 241);
-    font-size: 15px;
+    margin-right: 14px;
+    padding: 4px;
     border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    font-family: var(--font-nanumfont);
+    font-weight: 700;
 `
 export const PayInput = styled.input`
-    height: 40px;
+    height: 34px;
     width: 100%;
-    font-size: 15px;
     border-radius: 10px;
     border: 1px solid gray;
+    outline: none;
+    padding: 0 2%;
+    font-weight: 600;
 `
 export const ContentBox = styled.div`
     width: 100%;
@@ -187,6 +200,11 @@ export const Content = styled.textarea`
     resize: none;
     border: 1px solid gray;
     box-sizing: border-box;
+    border-radius: 12px;
+    padding: 12px;
+    font-family: var(--font-nanumfont);
+    font-weight: 600;
+    outline: none;
 `;
 export const HashtagBox = styled.div`
     width: 94%;
@@ -194,25 +212,30 @@ export const HashtagBox = styled.div`
 `
 export const HashtagInput = styled.input`
     width: 100%;
-    padding: 8px;
     height: 30px;
     border-radius: 10px;
-    border: 0.5px solid gray;
+    border: 1px solid gray;
+    outline: none;
+    padding: 1% 2%;
+    margin: 3px 0;
+    font-weight: 600;
 `;
 
 export const SubmitBox = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 20%;
+    /* border: 0; */
+    justify-content: center;
 `
 
 export const SubmitButton = styled.button`
     width: 80%;
     height: 30%;
     border-radius: 10px;
+    border: 0;
     background-color: rgb(0, 137, 181);
     color: white;
     font-size: 15px;
+    cursor: pointer;
 `;

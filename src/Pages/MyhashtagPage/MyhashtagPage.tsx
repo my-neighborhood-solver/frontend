@@ -76,9 +76,9 @@ export default function MyhashtagPage() {
       <SC.BackBtn onClick={() => history.back()}>
         <BiArrowBack size={24} />
       </SC.BackBtn>
-      <SC.Title>관심사 키워드 등록</SC.Title>
+      <SC.Title>나의 관심사 키워드</SC.Title>
       <SC.InputBox>
-        <SC.HashtagInput placeholder="알람 받으실 키워드를 입력해주세요"
+        <SC.HashtagInput placeholder="알림 받을 키워드를 등록해주세요"
           value={newhashtag}
           onKeyUp={(e) => {
             if (e.key === 'Enter') {
@@ -94,19 +94,19 @@ export default function MyhashtagPage() {
         >등록</SC.InputBtn>
       </SC.InputBox>
       <SC.HashtagListBox>
-        <SC.ListTitle>나의 관심사 키워드</SC.ListTitle>
-        <SC.ListBox>
-          {hashtags.length > 0 ? 
+        {hashtags.length > 0 ? 
             hashtags.map((item: any, index: number) => (
-              <div key={index}>
-                <SC.HashtageBox>
-                  <SC.HashtagMent>{item}</SC.HashtagMent>
-                  <SC.DeleteButton onClick={() => deleteHashtag(item, index)}>X</SC.DeleteButton>
-                </SC.HashtageBox>
-              </div>
-            )) : <span style={{ color: 'lightgray' }}>해시태그를 입력해주세요</span>
+              <>
+                <SC.ListTitle>나의 관심사 키워드 목록</SC.ListTitle>
+                <SC.ListBox key={index}>
+                  <SC.HashtageBox>
+                    <SC.HashtagMent>{item}</SC.HashtagMent>
+                    <SC.DeleteButton onClick={() => deleteHashtag(item, index)}>X</SC.DeleteButton>
+                  </SC.HashtageBox>
+                </SC.ListBox>
+              </>
+            )) : ''
           }
-        </SC.ListBox>
       </SC.HashtagListBox>
     </SC.Container>
   )

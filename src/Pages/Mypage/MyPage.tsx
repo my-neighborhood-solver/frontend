@@ -67,7 +67,7 @@ export default function MyPage() {
 
   return (
     <SC.Container>
-      <SC.Title>마이페이지</SC.Title>
+      <SC.Title>MyPage</SC.Title>
 
       <SC.ProBox>
         <SC.ImgNameBox>
@@ -94,7 +94,7 @@ export default function MyPage() {
           <SC.MentBox>
             <SC.LikeTitle>나의 관심사 키워드</SC.LikeTitle>
             <Link to='/mypage/hashtag' style={{ textDecoration: "none", color: "#000"}}>
-              <SC.LikeEditBtn>수정하기</SC.LikeEditBtn>
+              <SC.LikeEditBtn>등록하기</SC.LikeEditBtn>
             </Link>
           </SC.MentBox>
           <SC.HashtagList>
@@ -103,7 +103,7 @@ export default function MyPage() {
                 <div key={index}>
                   <SC.Tagment key={index}>{`#${item}`}</SC.Tagment>
                 </div>
-              )) : <span style={{ color: 'lightgray' }}>해시태그를 입력해주세요</span>
+              )) : <SC.HashtagMent style={{ color: '#545454' }}>📌 알림 받을 해시태그를 등록해보세요!</SC.HashtagMent>
             }
           </SC.HashtagList>
         </SC.HashtagBox>

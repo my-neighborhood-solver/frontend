@@ -14,7 +14,7 @@ const StyledFooter = styled.div`
     border-radius: 18px 18px 0 0;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: flex-end;
 
     color: white;
@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
               </div>
             </Link>
 
-            {
+            {/* {
               NowUser
               ?
               // <Link to="/chatting/list" style={{ textDecoration: "none", color: "#fff"}}>
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
                 <BsChatDots size={22}/>
                 <Ment>채팅</Ment>
               </div>        
-            }
+            } */}
 
             {
               NowUser
